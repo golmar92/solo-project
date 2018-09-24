@@ -2,6 +2,7 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+@import "../images/fonts/_Glyphter.scss";
 
 * {
 	margin: 0;
@@ -10,26 +11,36 @@
 }
 
 .top-bar {
-	text-align: right;
 	height: 50px;
 	width: 100%;
 	background-color: white;
 	border-bottom: 1px solid #E3E3E3;
+	display: flex;
+	justify-content: flex-end;
 }
+
+.top-bar_container {
+	display: flex;
+}
+
 .top-bar_button {
-	display: inline-block;
 	background-color: white;
 	height: 50px;
 	border: 1px solid #E3E3E3;
 	font-size: 20px;
+	display: flex;
 	.icon {
-		width: 20px;
-		height: 20px;
 		margin: 0 10px;
+		opacity: 0.5;
+		}
+	.icon_small {
+		font-size: 10px;
+		line-height: 27px;
 	}
 	.profile {
 		font-size: 12px;
-		margin: 0 10px;
+		margin: 0 10px 0 0;
 		text-decoration: none;
+		line-height: 20px;
 	}
 }
