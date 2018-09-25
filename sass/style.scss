@@ -3,6 +3,7 @@
 @import "normalize";
 @import "layout";
 @import "../images/fonts/_Glyphter.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 * {
 	margin: 0;
@@ -10,10 +11,14 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .top-bar {
 	height: 50px;
 	width: 100%;
-	background-color: white;
+	background-color: #ffffff;
 	border-bottom: 1px solid #E3E3E3;
 	display: flex;
 	justify-content: flex-end;
@@ -24,23 +29,45 @@
 }
 
 .top-bar_button {
-	background-color: white;
+	background-color: #ffffff;
 	height: 50px;
 	border: 1px solid #E3E3E3;
 	font-size: 20px;
 	display: flex;
+	transition: 0.3s;
 	.icon {
 		margin: 0 10px;
 		opacity: 0.5;
+		transition: 0.3s;
 		}
 	.icon_small {
 		font-size: 10px;
 		line-height: 27px;
 	}
+	.money {
+		font-weight: bold;
+		color: #979797;
+		transition: 0.3s;
+	}
 	.profile {
 		font-size: 12px;
+		color: #56819F;
 		margin: 0 10px 0 0;
 		text-decoration: none;
 		line-height: 20px;
+		transition: 0.3s;
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: #F5F5F2; 
+		.icon {
+			opacity: 1;
+		}
+		.money {
+			color: #F58220;
+		}
+		.profile {
+			color: #F58220;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
 /** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /* Sections ========================================================================== */
@@ -167,14 +168,26 @@ template { display: none; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.top-bar { height: 50px; width: 100%; background-color: white; border-bottom: 1px solid #E3E3E3; display: flex; justify-content: flex-end; }
+body { font-family: 'Open Sans', sans-serif; }
+
+.top-bar { height: 50px; width: 100%; background-color: #ffffff; border-bottom: 1px solid #E3E3E3; display: flex; justify-content: flex-end; }
 
 .top-bar_container { display: flex; }
 
-.top-bar_button { background-color: white; height: 50px; border: 1px solid #E3E3E3; font-size: 20px; display: flex; }
+.top-bar_button { background-color: #ffffff; height: 50px; border: 1px solid #E3E3E3; font-size: 20px; display: flex; transition: 0.3s; }
 
-.top-bar_button .icon { margin: 0 10px; opacity: 0.5; }
+.top-bar_button .icon { margin: 0 10px; opacity: 0.5; transition: 0.3s; }
 
 .top-bar_button .icon_small { font-size: 10px; line-height: 27px; }
 
-.top-bar_button .profile { font-size: 12px; margin: 0 10px 0 0; text-decoration: none; line-height: 20px; }
+.top-bar_button .money { font-weight: bold; color: #979797; transition: 0.3s; }
+
+.top-bar_button .profile { font-size: 12px; color: #56819F; margin: 0 10px 0 0; text-decoration: none; line-height: 20px; transition: 0.3s; }
+
+.top-bar_button:hover { cursor: pointer; background-color: #F5F5F2; }
+
+.top-bar_button:hover .icon { opacity: 1; }
+
+.top-bar_button:hover .money { color: #F58220; }
+
+.top-bar_button:hover .profile { color: #F58220; }
