@@ -20,19 +20,19 @@
 				<button class="top-bar_button"><span class="top-bar_icon icon-quit"></span></button>
 			</div>
 		</header>
-		<section class="sidebar">
+		<section class="sidebar sidebar-hidden">
 			<div class="sidebar_header">
 				<div class="sidebar_logo"><img src="images/logo.png"></div>
 				<div class="sidebar_hamburger"><i class="fas fa-bars hamburger"></i></div>
 			</div>
 			<div class="sidebar_menu">
-				<div class="menu_position general"><span class="menu_icon icon-general"></span>General</div>
-				<div class="menu_position details"><span class="menu_icon icon-details"></span>Details</div>
-				<div class="menu_position links"><span class="menu_icon icon-links"></span>Links</div>
-				<div class="menu_position banners"><span class="menu_icon icon-banners"></span>Banners</div>
-				<div class="menu_position personal-data"><span class="menu_icon icon-personaldata"></span>Personal data</div>
-				<div class="menu_position payout"><span class="menu_icon icon-payout"></span>Payout</div>
-				<div class="menu_position postback"><span class="menu_icon icon-postback"></span>Postback</div>
+				<a href="#general"><div class="menu_position general"><span class="menu_icon icon-general"></span>General</div></a>
+				<a href="#"><div class="menu_position details"><span class="menu_icon icon-details"></span>Details</div></a>
+				<a href="#links"><div class="menu_position links"><span class="menu_icon icon-links"></span>Links</div></a>
+				<a href="#"><div class="menu_position banners"><span class="menu_icon icon-banners"></span>Banners</div></a>
+				<a href="#"><div class="menu_position personal-data"><span class="menu_icon icon-personaldata"></span>Personal data</div></a>
+				<a href="#"><div class="menu_position payout"><span class="menu_icon icon-payout"></span>Payout</div></a>
+				<a href="#"><div class="menu_position postback"><span class="menu_icon icon-postback"></span>Postback</div></a>
 			</div>
 			<div class="sidebar_chat">
 				<div class="chat_position">
@@ -42,45 +42,43 @@
 			</div>
 		</section>
 		<section class="main_content">
-			<div class="content_general-statistic">
+			<div class="content_general-statistic" id="general">
 				<h4 class="section-title">GENERAL STATISTIC</h4>
-				<hr>
 				<div class="general-statistic_calendar">
 					<div class="date-box">
 						<input type="date" name="start" value="2018-09-25">
 						<span class="separator">|</span>
 						<input type="date" name="end" value="2018-09-26">
-						<span class="icon-calendar"></span>
+						<span class="icon-calendar calendar"></span>
 					</div>
 					<button class="refresh-button"><span class="icon-refresh"></span></button>
 				</div>
-				<hr>
 				<div class="statistic-data">
 					<div class="row statistic-data_row">
-						<div class="col-m-3 statistic-data_column">
-							<table>
+						<div class="col-m-4 col-s-3 statistic-data_column">
+							<table cellspacing="0" cellpadding="0">
 								<tbody>
 									<tr>
 										<td class="data border-bottom">Visit Singups</td>
-										<td class="border-bottom">124</td>
+										<td class="data-value border-bottom">124</td>
 									</tr>
 									<tr>
 										<td class="data border-bottom">FTD</td>
-										<td class="border-bottom">445</td>
+										<td class="data-value border-bottom">445</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<div class="col-m-3 statistic-data_column">
+						<div class="col-m-4 col-s-3 statistic-data_column">
 							<table>
 								<tbody>
 									<tr>
 										<td class="data border-bottom">New deposit</td>
-										<td class="border-bottom">564</td>
+										<td class="data-value border-bottom">564</td>
 									</tr>
 									<tr>
 										<td class="data border-bottom">Turn over</td>
-										<td class="border-bottom">432</td>
+										<td class="data-value border-bottom">432</td>
 									</tr>
 								</tbody>
 							</table>
@@ -99,54 +97,64 @@
 					</div>
 				</div>
 			</div>
-			<div class="links">
+			<div class="links" id="links">
 				<h4 class="section-title">LINKS</h4>
-				<hr>
 				<div class="add-link"><button class="add-new_button">+ add new</button></div>
 				<div class="links_table">
 					<div class="row links_row">
-						<div class="col-m-6">Home page</div>
-						<div class="col-m-6 link"><a href="#">http://www.homepage.com</a></div>
+						<div class="col-m-4 col-s-4">Home page</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.homepage.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Currently offer</div>
-						<div class="col-m-6 link"><a href="#">http://www.currently.com</a></div>
+						<div class="col-m-4 col-s-4">Currently offer</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.currently.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Blurpix</div>
-						<div class="col-m-6 link"><a href="#">http://blurpix.com</a></div>
+						<div class="col-m-4 col-s-4">Blurpix</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://blurpix.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Your site</div>
-						<div class="col-m-6 link"><a href="#">http://www.yoursite.com</a></div>
+						<div class="col-m-4 col-s-4">Your site</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.yoursite.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Google</div>
-						<div class="col-m-6 link"><a href="#">http://www.google.com</a></div>
+						<div class="col-m-4 col-s-4">Google</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.google.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Facebook</div>
-						<div class="col-m-6 link"><a href="#">http://www.facebook.com</a></div>
+						<div class="col-m-4 col-s-4">Facebook</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.facebook.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Dashboard</div>
-						<div class="col-m-6 link"><a href="#">http://www.dashboard.com</a></div>
+						<div class="col-m-4 col-s-4">Dashboard</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.dashboard.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Blurax</div>
-						<div class="col-m-6 link"><a href="#">http://www.blurax.com</a></div>
+						<div class="col-m-4 col-s-4">Blurax</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.blurax.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Piece of wine</div>
-						<div class="col-m-6 link"><a href="#">http://www.pieceofwine.com</a></div>
+						<div class="col-m-4 col-s-4">Piece of wine</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.pieceofwine.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 					<div class="row links_row">
-						<div class="col-m-6">Twitter</div>
-						<div class="col-m-6 link"><a href="#">http://www.twitter.com</a></div>
+						<div class="col-m-4 col-s-4">Twitter</div>
+						<div class="col-m-4 col-s-4 link"><a href="#">http://www.twitter.com</a></div>
+						<div class="col-offset-2 col-m-2 col-s-4 links_row_col-icon"><span class="icon-links links_row-icon"></span><span class="icon-trash links_row-icon"></span></div>
 					</div>
 				</div>
 			<div class="add-link"><button class="add-new_button">+ add new</button></div>
 			</div>
 		</section>
 	</body>
+<script src="js/script.js" type="text/javascript"></script>
 </html>
