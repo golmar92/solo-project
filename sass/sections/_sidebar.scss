@@ -1,0 +1,87 @@
+.sidebar {
+	width: 250px;
+	height: 100%;
+	background-color: $sidebar_background-color;
+	position: fixed;
+	color: $sidebar_text-color;
+	transition: all 0.5s;
+	z-index: 100;
+	&.sidebar-hidden {
+		margin-left: -200px;
+		.sidebar_menu {
+			.menu_position {
+				display: flex;
+    			flex-direction: row-reverse;
+    			justify-content: space-between;
+    			padding-right: 5px;
+			}
+		}	
+		+ .main_content {
+			padding-left: 70px;
+		}
+	}
+	.sidebar_header {
+		display: flex;
+    	justify-content: space-around;
+    	.sidebar_logo {
+    		padding: 10px 0;
+    	}
+		.sidebar_hamburger {
+			padding: 12px 0;
+    		font-size: 20px;
+    		color: $sidebar_text-color;
+    		.hamburger {
+    			margin-left: 75px;
+    			&:hover {
+    				color: $sidebar_hamburger-hover-color;
+    				cursor: pointer;
+    			}
+    		}
+		}
+	}
+	.sidebar_menu {
+		display: flex;
+    	flex-direction: column;
+    	padding-bottom: 20px;
+    	a {
+    		text-decoration: none;
+	    	.menu_position {
+	    		padding: 15px;
+	    		transition: all 0.2s;
+	    		color: $sidebar_text-color;
+	    		&:hover {
+					color: #ffffff;
+					background-color: lighten($sidebar_background-color, 10%);
+					border-left: 4px solid $sidebar_menu-hover-border;
+					cursor: pointer;
+				}
+	    		.menu_icon {
+	    			padding-right: 15px;
+	    		}
+	    	}
+    	}
+	}
+	.sidebar_chat {
+		padding-top: 20px;
+		border-top: 1px solid $border-color;
+		.chat_position {
+			padding: 0 10px 10px 0;
+			line-height: 40px;
+			text-align: center;
+			transition: all 0.2s;
+			&:hover {
+				background-color: lighten($sidebar_background-color, 10%);
+				cursor: pointer;
+				color: $sidebar_chat-text-hover-color;
+				.chat_profile {
+					color: $user_text-hover-color;
+				}
+			}
+			.chat_profile {
+				display: flex;
+    			justify-content: space-evenly;
+    			color: $user_text-color;
+			}
+		}
+	}
+}

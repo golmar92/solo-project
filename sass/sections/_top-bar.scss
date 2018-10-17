@@ -1,0 +1,64 @@
+
+
+.top-bar {
+	height: 50px;
+	width: 100%;
+	background-color: $top-bar_background-color;
+	border-bottom: 1px solid $border-color;
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	z-index: 100;
+}
+
+.top-bar_container {
+	display: flex;
+}
+
+.top-bar_button {
+	background-color: $top-bar_background-color;
+	height: 50px;
+	border: 1px solid $border-color;
+	font-size: 20px;
+	display: flex;
+	padding: 0 5px;
+	transition: 0.3s;
+	.top-bar_icon {
+		margin: 0 10px;
+		opacity: 0.5;
+		transition: 0.3s;
+	}
+	.icon_small {
+		font-size: 10px;
+		line-height: 27px;
+	}
+	.money {
+		font-weight: bold;
+		color: $top-bar_money-color;
+		transition: 0.3s;
+	}
+	.user {
+		font-size: 12px;
+		color: $user_text-color;
+		margin: 0 10px 0 0;
+		text-decoration: none;
+		line-height: 20px;
+		transition: 0.3s;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: $top-bar_icon-hover-color; 
+		.top-bar_icon {
+			opacity: 1;
+		}
+		.money {
+			color: $top-bar_money-hover-color;
+		}
+		.user {
+			color: $user_text-hover-color;
+		}
+	}
+}
