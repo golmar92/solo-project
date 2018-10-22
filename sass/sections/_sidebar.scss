@@ -52,7 +52,7 @@
 	    		&:hover {
 					color: #ffffff;
 					background-color: lighten($sidebar_background-color, 10%);
-					border-left: 4px solid $sidebar_menu-hover-border;
+					border-left: 4px solid $sidebar_menu-hover-border-color;
 					cursor: pointer;
 				}
 	    		.menu_icon {
