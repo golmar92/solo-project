@@ -40,6 +40,7 @@
 		transition: 0.3s;
 		@media (max-width: 767px){
 			opacity: 1;
+			transition: 0s;
 		}
 	}
 	.icon_small {
@@ -64,7 +65,11 @@
 	}
 	&:hover {
 		cursor: pointer;
-		background-color: $top-bar_icon-hover-color; 
+		background-color: $top-bar_icon-hover-color;
+		@media (max-width: 500px){
+			background-color: lighten($sidebar_background-color, 10%);
+			color: #ffffff; 
+		}
 		.top-bar_icon {
 			opacity: 1;
 		}
