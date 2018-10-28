@@ -6,7 +6,9 @@
 	color: $sidebar_text-color;
 	transition: all 0.5s;
 	z-index: 100;
-	overflow-y: scroll;
+	@media (max-width: 600px){
+		overflow-y: scroll;
+	}
 	&.sidebar-hidden {
 		margin-left: -200px;
 		.sidebar_menu {
