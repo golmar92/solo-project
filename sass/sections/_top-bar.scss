@@ -13,7 +13,7 @@
 
 .top-bar_container {
 	display: flex;
-	@media (max-width: 500px) {
+	@media (max-width: 600px) {
 		display: none;
 	}
 }
@@ -26,7 +26,7 @@
 	display: flex;
 	padding: 0 5px;
 	transition: 0.3s;
-	@media (max-width: 500px){
+	@media (max-width: 600px){
 		width: 100%;
     	background-color: #191919;
     	border: #191919;
@@ -66,7 +66,7 @@
 	&:hover {
 		cursor: pointer;
 		background-color: $top-bar_icon-hover-color;
-		@media (max-width: 500px){
+		@media (max-width: 600px){
 			background-color: lighten($sidebar_background-color, 10%);
 			color: #ffffff; 
 		}
