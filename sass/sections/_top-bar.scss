@@ -25,14 +25,15 @@
 	font-size: 20px;
 	display: flex;
 	padding: 0 5px;
-	transition: 0.3s;
+	transition: 0.2s;
 	@media (max-width: 600px){
 		width: 100%;
     	background-color: #191919;
     	border: #191919;
     	color: #979797;
-    	justify-content: space-between;
-    	flex-direction: row-reverse;
+    	font-weight: bold;
+    	line-height: 16px;
+    	font-size: 16px;
 	}
 	.top-bar_icon {
 		margin: 0 10px;
@@ -42,10 +43,16 @@
 			opacity: 1;
 			transition: 0s;
 		}
+		@media (max-width: 600px){
+			padding-right: 5px;
+		}
 	}
 	.icon_small {
 		font-size: 10px;
 		line-height: 27px;
+		@media (max-width: 600px){
+			line-height: 18px;
+		}
 	}
 	.money {
 		font-weight: bold;
@@ -62,13 +69,20 @@
 		@media (max-width: 767px) {
 			display: none;
 		}
+		@media (max-width: 600px){
+			display: block;
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 100;
+		}
 	}
 	&:hover {
 		cursor: pointer;
 		background-color: $top-bar_icon-hover-color;
 		@media (max-width: 600px){
 			background-color: lighten($sidebar_background-color, 10%);
-			color: #ffffff; 
+			color: #ffffff;
+			border-left: 4px solid $sidebar_menu-hover-border-color;
 		}
 		.top-bar_icon {
 			opacity: 1;
